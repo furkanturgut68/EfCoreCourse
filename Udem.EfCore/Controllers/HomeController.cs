@@ -45,8 +45,26 @@ namespace Udem.EfCore.Controllers
             //    udemyContext.Products.Remove(deleteData);
             //}
 
-            Product product = new() { Price = 4000 };
-            udemyContext.Products.Add(product);
+            //Product product = new() { Price = 4000 };
+            //udemyContext.Products.Add(product);
+
+            udemyContext.Employees.Add(new FullTimeEmployee
+            {
+                Firstname = "Furkan", HourlyWage = 480, Lastname = "Turgut"
+            });
+            udemyContext.Employees.Add(new FullTimeEmployee
+            {
+                Firstname = "Alperen",
+                HourlyWage = 480,
+                Lastname = "Turgut"
+            });
+
+            udemyContext.Employees.Add(new PartTimeEmployee()
+            {
+                Firstname = "Mehmet",
+                DailyWage = 250,
+                Lastname = "Turgut"
+            });
 
             udemyContext.SaveChanges();
             return View();

@@ -56,6 +56,9 @@ namespace Udem.EfCore.Data.Context
         public DbSet<SalesHistories> SalesHistories { get; set; }
         public DbSet<ProductDetail> ProductDetails { get; set; }
         public DbSet<ProductCategory> ProductCategory { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<PartTimeEmployee> PartTimeEmployees { get; set; }
+        public DbSet<FullTimeEmployee> FullTimeEmployees { get; set; }
 
     }
 }
